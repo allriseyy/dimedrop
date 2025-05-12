@@ -1,9 +1,7 @@
 # keycraft
 A mobile app to help people learn how to use shortcut keys on Windows
 
-
-
-WSL & Docker Local Setup
+## WSL Setup
 1. install WSL:
 ```bash
 wsl --install
@@ -37,3 +35,19 @@ mkdir dev && cd dev && code .
 git clone https://github.com/allriseyy/keycraft.git
 ```
 6. splendid! you are all set!
+
+## Android Studio Setup
+1. download and install:
+```bash
+https://developer.android.com/studio
+```
+
+## The ingredients
+### IDE
+Visual Studio Code
+### Framework
+React Native
+### OS
+Linux
+### Platform
+Android
