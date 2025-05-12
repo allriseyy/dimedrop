@@ -33,4 +33,7 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git
 mkdir dev && cd dev && code .
 ```
 5. clone the repo
-git clone 
+```bash
+git clone https://github.com/allriseyy/keycraft.git
+```
+6. splendid! you are all set!
