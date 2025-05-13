@@ -36,12 +36,6 @@ git clone https://github.com/allriseyy/keycraft.git
 ```
 6. splendid! you are all set!
 
-## Android Studio Setup
-1. download and install:
-```bash
-https://developer.android.com/studio
-```
-
 ## The ingredients
 ### IDE
 Visual Studio Code
