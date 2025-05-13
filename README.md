@@ -1,6 +1,5 @@
 # keycraft
-A mobile app to help people learn how to use shortcut keys on Windows
-
+A mobile app to help people learn how to use shortcut keys
 ## WSL Setup
 1. install WSL:
 ```bash
@@ -15,7 +14,7 @@ wsl ~
 ```bash
 sudo apt-get update && apt-get upgrade
 ```
-3. follow the steps here to install Git and Git credentials helper: 
+5. follow the steps here to install Git and Git credentials helper: 
 ```bash
 https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git#installing-git
 ```
@@ -26,19 +25,20 @@ git config --global user.name "Your Name"
 git config --global user.email "youremail@domain.com"
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager.exe"
 ```
-4. create a dev folder and start Visual Studio Code
+6. create a dev folder and start Visual Studio Code
 ```bash
 mkdir dev && cd dev && code .
 ```
-5. clone the repo
+7. clone the repo
 ```bash
 git clone https://github.com/allriseyy/keycraft.git
 ```
-6. splendid! you are all set!
+8. splendid! you are all set!
 
 ## The ingredients
 ### IDE
 Visual Studio Code
+WSL
 ### Framework
 React Native
 ### OS
