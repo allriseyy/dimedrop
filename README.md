@@ -1,6 +1,6 @@
 # dimedrop
 A web app to help people track their expenses
-## WSL Setup
+## WSL and Git Setup
 1. install WSL:
 ```bash
 wsl --install
@@ -34,6 +34,19 @@ mkdir dev && cd dev && code .
 git clone https://github.com/allriseyy/dimedrop.git
 ```
 8. splendid! you are all set!
+
+## nvm
+```bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+source ~/.bashrc
+nvm --version
+```
+
+## npm
+```bash
+sudo apt install npm
+```
+
 
 ## The ingredients
 ### IDE
