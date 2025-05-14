@@ -1,5 +1,5 @@
 # keycraft
-A mobile app to help people learn how to use shortcut keys
+A web app to help people track their expenses
 ## WSL Setup
 1. install WSL:
 ```bash
@@ -40,8 +40,8 @@ git clone https://github.com/allriseyy/keycraft.git
 Visual Studio Code
 WSL
 ### Framework
-React Native
+React
 ### OS
 Linux
 ### Platform
-Android
+Web
