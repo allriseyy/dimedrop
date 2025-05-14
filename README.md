@@ -1,5 +1,6 @@
 # dimedrop
 A web app to help people track their expenses
+
 ## WSL and Git Setup
 1. install WSL:
 ```bash
@@ -47,11 +48,20 @@ nvm --version
 sudo apt install npm
 ```
 
+## TO-DO
+1-create a landing page <br/>
+2-restructure the files <br/>
+3-unit test <br/>
+
+
+
 
 ## The ingredients
 ### IDE
-Visual Studio Code
+Visual Studio Code <br/>
 WSL
+### Language
+Javascript
 ### Framework
 React
 ### OS
