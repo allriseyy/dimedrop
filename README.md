@@ -1,4 +1,4 @@
-# keycraft
+# dimedrop
 A web app to help people track their expenses
 ## WSL Setup
 1. install WSL:
@@ -12,7 +12,7 @@ wsl ~
 3. follow the prompts to register yourself as a new user
 4. run:
 ```bash
-sudo apt-get update && apt-get upgrade
+sudo apt-get update && sudo apt-get upgrade
 ```
 5. follow the steps here to install Git and Git credentials helper: 
 ```bash
@@ -31,7 +31,7 @@ mkdir dev && cd dev && code .
 ```
 7. clone the repo
 ```bash
-git clone https://github.com/allriseyy/keycraft.git
+git clone https://github.com/allriseyy/dimedrop.git
 ```
 8. splendid! you are all set!
 
