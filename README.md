@@ -51,9 +51,8 @@ sudo apt install npm
 ## TO-DO
 1-create a landing page <br/>
 2-restructure the files <br/>
-3-unit test <br/>
-
-
+3-dockerize <br/>
+4-unit test <br/>
 
 
 ## The ingredients
