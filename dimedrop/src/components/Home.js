@@ -16,6 +16,12 @@ const Home = () => {
                 <li>
                     <Link to="/contactus">Contact Us</Link>
                 </li>
+                <li>
+                    <Link to="/deepseekui">Deepseek UI</Link>
+                </li>
+                <li>
+                    <Link to="/chatgptui">Chatgpt UI</Link>
+                </li>
             </ul>
         </div>
     );

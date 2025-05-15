@@ -9,24 +9,14 @@ import './App.css';
 import Home from "./components/Home";
 import About from "./components/About";
 import ContactUs from "./components/ContactUs";
+import DeepseekUI from './components/DeepseekUI';
+import ChatgptUI from './components/ChatgptUI';
+import React from 'react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Router>
+      <Router>
           <Routes>
               <Route
                   exact
@@ -42,12 +32,19 @@ function App() {
                   element={<ContactUs />}
               />
               <Route
+                  path="/deepseekui"
+                  element={<DeepseekUI />}
+              />
+              <Route
+                  path="/chatgptui"
+                  element={<ChatgptUI />}
+              />
+              <Route
                   path="*"
                   element={<Navigate to="/" />}
               />
           </Routes>
         </Router>
-      </header>
     </div>
   );
 }
