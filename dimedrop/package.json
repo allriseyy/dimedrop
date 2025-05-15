@@ -37,18 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>",
-      "/home/some/path/"
-    ],
-    "modulePaths": [
-      "<rootDir>",
-      "/home/some/other/path"
-    ],
-    "moduleDirectories": [
-      "node_modules"
-    ]
   }
 }
