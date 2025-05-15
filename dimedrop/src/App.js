@@ -1,5 +1,14 @@
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate,
+} from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
+import Home from "./components/Home";
+import About from "./components/About";
+import ContactUs from "./components/ContactUs";
 
 function App() {
   return (
@@ -17,6 +26,27 @@ function App() {
         >
           Learn React
         </a>
+        <Router>
+          <Routes>
+              <Route
+                  exact
+                  path="/"
+                  element={<Home />}
+              />
+              <Route
+                  path="/about"
+                  element={<About />}
+              />
+              <Route
+                  path="/contactus"
+                  element={<ContactUs />}
+              />
+              <Route
+                  path="*"
+                  element={<Navigate to="/" />}
+              />
+          </Routes>
+        </Router>
       </header>
     </div>
   );
