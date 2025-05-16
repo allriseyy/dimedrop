@@ -34,31 +34,41 @@ mkdir dev && cd dev && code .
 ```bash
 git clone https://github.com/allriseyy/dimedrop.git
 ```
-8. splendid! you are all set!
-
-## nvm
+8. nvm (0.40.3)
 ```bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 source ~/.bashrc
 nvm --version
 ```
-
-## npm
+9. npm (10.9.2)
 ```bash
 sudo apt install npm
+npm --version
+```
+10. navigate into the project root folder
+```bash
+cd dimedrop
+```
+11. install the packages
+```bash
+npm install
+```
+12. splendid! you are all set!
+```bash
+npm start
 ```
 
 ## TO-DO
 1-create a landing page <br/>
 2-restructure the files <br/>
 3-dockerize <br/>
-4-unit test <br/>
+4-enhance landing page <br/>
+5-unit test <br/>
 
 
 ## The ingredients
 ### IDE
-Visual Studio Code <br/>
-WSL
+Visual Studio Code
 ### Language
 Javascript
 ### Framework
