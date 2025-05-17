@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import React from "react";
 
 const Container = styled.div`
   font-family: 'Press Start 2P', cursive;
