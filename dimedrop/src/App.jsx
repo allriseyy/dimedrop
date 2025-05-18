@@ -2,16 +2,13 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Navigate,
     Link,
 } from 'react-router-dom'
-import logo from './logo.svg';
-import './App.css';
-import Home from "./components/Home";
-import AboutUs from "./components/AboutUs";
-import ContactUs from "./components/ContactUs";
-import DeepseekUI from './components/DeepseekUI';
-import ChatgptUI from './components/ChatgptUI';
+import './css/App.css';
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+import ChatgptUI from './pages/ChatgptUI';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
@@ -61,21 +58,6 @@ const AnimatedPixel = styled.div`
   align-items: center;      /* vertical centering */
 `;
 
-const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 30px;
-`;
-
-const PixelImage = styled.img`
-  border: 4px solid #ecf0f1;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  image-rendering: crisp-edges;
-`;
-
 function App() {
   return (
     <div className="App">
@@ -85,17 +67,17 @@ function App() {
         <Router>
             <Container>
                 <Nav>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/aboutus">About Us</NavLink>
-                <NavLink to="/contactus">Contact Us</NavLink>
-                {/* <NavLink to="/expenses">Expenses</NavLink> */}
+                  <NavLink to="/">Home</NavLink>
+                  <NavLink to="/chatgptui">Expenses</NavLink>
+                  <NavLink to="/aboutus">About Us</NavLink>
+                  <NavLink to="/contactus">Contact Us</NavLink>
                 </Nav>
 
                 <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/aboutus" element={<AboutUs />} />
-                <Route path="/contactus" element={<ContactUs />} />
-                {/* <Route path="/expenses" element={<Expenses />} /> */}
+                  <Route path="/" element={<Home />} />
+                  <Route path="/aboutus" element={<AboutUs />} />
+                  <Route path="/contactus" element={<ContactUs />} />
+                  <Route path="/chatgptui" element={<ChatgptUI />} />
                 </Routes>
             </Container>
         </Router>
