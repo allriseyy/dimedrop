@@ -1,5 +1,5 @@
 import React from "react";
-import FollowMeCard from "../components/FollowMeButton";
+import FollowMeCard from "../components/FollowMeCard";
 import styled from 'styled-components';
 
 const FollowMeCardContainer = styled.div`
