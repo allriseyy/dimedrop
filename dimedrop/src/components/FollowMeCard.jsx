@@ -14,7 +14,7 @@ const FollowMeCard = () => {
             <strong> Instagram </strong>
             <div className="card__body">Follow for more</div>          
             <button>
-                <a href="https://www.instagram.com/life.with.yy/" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://www.instagram.com/life.with.yy/" target="_blank" rel="noopener noreferrer">allriseyy</a>
             </button>
             <span>Follow us</span>
         </div>

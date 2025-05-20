@@ -1,0 +1,57 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background-color: #1d2b3a;
+  padding: 2rem;
+  color: #f1f1f1;
+  width: 300px;
+  text-align: center;
+  border: 4px solid #ffa500;
+}
+
+.pixel-border {
+  font-family: 'Press Start 2P', cursive;
+  box-shadow: 0 0 0 4px #000;
+}
+
+.pixel-input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #0e1a25;
+  color: #fff;
+  border: 2px solid #ffa500;
+}
+
+.pixel-button {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #ffa500;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.error-banner {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  background: #b30000;
+  color: #fff;
+  padding: 0.1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border: 2px solid #ffb400;
+}
