@@ -59,11 +59,18 @@ npm start
 ```
 
 ## TO-DO
-1-create a landing page <br/>
-2-restructure the files <br/>
-3-dockerize <br/>
-4-enhance landing page <br/>
-5-unit test <br/>
+1-create a landing page ✅ <br/>
+2-restructure the files ✅ <br/>
+3-dockerize ✅ <br/>
+4-enhance landing page ✅ <br/>
+5-unit test ✅ <br/>
+6-login feature ✅ <br/>
+7-sign up feature <br/>
+8-expenses page <br/>
+9-home page <br/>
+10-about us page <br/>
+11-contact us page <br/>
+
 
 
 ## The ingredients
