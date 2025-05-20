@@ -9,8 +9,10 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import ChatgptUI from './pages/ChatgptUI';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import LoginModal from './components/LoginModal';
 import styled, { keyframes } from 'styled-components';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -25,6 +27,24 @@ const Nav = styled.nav`
   padding: 15px;
   margin-bottom: 30px;
   border-bottom: 4px solid #ecf0f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const NavLeft = styled.div`
+  display: flex;
+  justify-content: left;
+`;
+
+const NavCenter = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const NavRight = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const NavLink = styled(Link)`
@@ -59,6 +79,27 @@ const AnimatedPixel = styled.div`
 `;
 
 function App() {
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+
+  useEffect(() => {
+    const storedAuth = localStorage.getItem('isAuthenticated');
+    if (storedAuth === 'true') {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+    localStorage.setItem('isAuthenticated', 'true');
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    localStorage.removeItem('isAuthenticated');
+  };
+
   return (
     <div className="App">
         <AnimatedPixel>
@@ -67,20 +108,43 @@ function App() {
         <Router>
             <Container>
                 <Nav>
-                  <NavLink to="/">Home</NavLink>
-                  <NavLink to="/chatgptui">Expenses</NavLink>
-                  <NavLink to="/aboutus">About Us</NavLink>
-                  <NavLink to="/contactus">Contact Us</NavLink>
+                  <NavLeft>
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/aboutus">About Us</NavLink>
+                    <NavLink to="/contactus">Contact Us</NavLink>
+                  </NavLeft>
+                  <NavCenter>
+                    {isAuthenticated && <NavLink to="/chatgptui">Expenses</NavLink>}
+                  </NavCenter>
+                  <NavRight>
+                    {!isAuthenticated ? (
+                      <button onClick={() => setShowLogin(true)}>Login</button>
+                    ) : (
+                      <button onClick={handleLogout}>Logout</button>
+                    )}
+                  </NavRight>
                 </Nav>
 
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/aboutus" element={<AboutUs />} />
                   <Route path="/contactus" element={<ContactUs />} />
-                  <Route path="/chatgptui" element={<ChatgptUI />} />
+                  <Route
+                    path="/chatgptui"
+                    element={
+                      <ProtectedRoute isAuthenticated={isAuthenticated}>
+                        <ChatgptUI />
+                      </ProtectedRoute>
+                    }
+                  />
                 </Routes>
             </Container>
         </Router>
+        <LoginModal
+          show={showLogin}
+          onClose={() => setShowLogin(false)}
+          onLogin={handleLogin}
+        />
     </div>
   );
 }
