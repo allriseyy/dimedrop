@@ -1,0 +1,33 @@
+.home-container {
+  flex: 1;
+  background: url('../assests/FjThVbwUoAEZ3aS.jfif') repeat;
+  background-size: cover;
+  animation: scrollBackground 60s linear infinite;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+@keyframes scrollBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 1000px;
+  }
+}
+
+.home-title {
+  font-size: 2rem;
+  color: #FFA500;
+  text-shadow: 2px 2px #000;
+  opacity: 0;
+  transition: opacity 2s ease-in;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.fade-in .home-title {
+  opacity: 1;
+}

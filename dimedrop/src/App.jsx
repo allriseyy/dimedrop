@@ -15,9 +15,10 @@ import styled, { keyframes } from 'styled-components';
 import ProtectedRoute from './components/ProtectedRoute';
 
 const Container = styled.div`
-  margin: 0 auto;
-  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  font-family: 'Press Start 2P', cursive;
   color: #ecf0f1;
   image-rendering: pixelated;
 `;
@@ -102,9 +103,6 @@ function App() {
 
   return (
     <div className="App">
-        <AnimatedPixel>
-            <h1 className="Title">Welcome to DimeDrop</h1>
-        </AnimatedPixel>
         <Router>
             <Container>
                 <Nav>
