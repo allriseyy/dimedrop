@@ -1,5 +1,5 @@
 # dimedrop
-A web app to help people track their expenses
+A web app to help people track their expenses in a fun way by playing games
 
 ## WSL and Git Setup
 1. install WSL:
@@ -58,6 +58,17 @@ npm install
 npm start
 ```
 
+## Docker
+1. install docker
+```bash
+https://docs.docker.com/engine/install/
+```
+2. build and run the image and container
+```bash
+docker compose up --build
+```
+3. enjoy !
+
 ## TO-DO
 1-create a landing page ✅ <br/>
 2-restructure the files ✅ <br/>
@@ -77,10 +88,27 @@ npm start
 ### IDE
 Visual Studio Code
 ### Language
-Javascript
+Javascript <br/>
+Typescript
 ### Framework
-React
+React <br/>
+TailwindCSS
 ### OS
-Linux
+Linux Ubuntu 24.04
 ### Platform
 Web
+
+
+# Screenshot
+24 May 2025 (v1)
+![image](https://github.com/user-attachments/assets/e52c0295-6d73-40cd-8dae-f122b2694183)
+![image](https://github.com/user-attachments/assets/1da17dd5-24cb-4b6e-be61-dbc4fe33ac63)
+![image](https://github.com/user-attachments/assets/5a9b908a-eb43-41ba-b5bb-d0bfaf0e74c1)
+![image](https://github.com/user-attachments/assets/1fe16e67-bcb3-4412-ac2c-051f0dbcdd9e)
+![image](https://github.com/user-attachments/assets/8af4b148-4e56-421f-b665-e71febf9a856)
+
+
+
+
+
+
