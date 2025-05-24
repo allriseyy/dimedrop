@@ -26,7 +26,6 @@ const Container = styled.div`
 const Nav = styled.nav`
   background: #34495e;
   padding: 15px;
-  margin-bottom: 30px;
   border-bottom: 4px solid #ecf0f1;
   display: flex;
   justify-content: space-between;
@@ -64,19 +63,6 @@ const pixelate = keyframes`
   0% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
   100% { transform: translateY(0); }
-`;
-
-const AnimatedPixel = styled.div`
-  animation: ${pixelate} 1s infinite;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
-  color:rgb(255, 153, 0);
-  height: 10vh;
-  align-items: center;
-
-  display: flex;
-  justify-content: center;  /* horizontal centering */
-  align-items: center;      /* vertical centering */
 `;
 
 function App() {

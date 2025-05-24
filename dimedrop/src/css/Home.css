@@ -1,13 +1,15 @@
 .home-container {
   flex: 1;
-  background: url('../assests/FjThVbwUoAEZ3aS.jfif') repeat;
+  background: url('../assests/meteor_shower.png') repeat;
   background-size: cover;
   animation: scrollBackground 60s linear infinite;
-
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  flex-direction: column;
+}
+
+.home-container p {
+  margin: 5vh;
+  width: 90%;
 }
 
 @keyframes scrollBackground {
@@ -15,12 +17,13 @@
     background-position: 0 0;
   }
   to {
-    background-position: -1000px 1000px;
+    background-position: -750px 750px;
   }
 }
 
 .home-title {
-  font-size: 2rem;
+  padding-top: 5vh;
+  font-size: 4rem;
   color: #FFA500;
   text-shadow: 2px 2px #000;
   opacity: 0;
@@ -28,6 +31,15 @@
   font-family: 'Press Start 2P', cursive;
 }
 
+.home-description {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
 .fade-in .home-title {
+  opacity: 1;
+}
+
+.fade-in .home-description {
   opacity: 1;
 }
