@@ -19,7 +19,7 @@ const PixelImage = styled.img`
 
 const AboutUs = () => {
     return (
-        <div>
+        <div style={{ margin: '20px'}}>
             <h2>Our Team</h2>
             <GridContainer>
                 <PixelImage src={Me}/>
