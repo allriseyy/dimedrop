@@ -11,6 +11,7 @@ import ContactUs from "./pages/ContactUs";
 import ChatgptUI from './pages/ChatgptUI';
 import React, { useState, useEffect } from 'react';
 import LoginModal from './components/LoginModal';
+import SignUpModal from './components/SignUpModal';
 import styled, { keyframes } from 'styled-components';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -69,6 +70,7 @@ function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [showSignup, setShowSignup] = useState(false);
 
   useEffect(() => {
     const storedAuth = localStorage.getItem('isAuthenticated');
@@ -85,6 +87,7 @@ function App() {
   const handleLogout = () => {
     setIsAuthenticated(false);
     localStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('token');
   };
 
   return (
@@ -102,7 +105,10 @@ function App() {
                   </NavCenter>
                   <NavRight>
                     {!isAuthenticated ? (
-                      <button onClick={() => setShowLogin(true)}>Login</button>
+                      <>
+                        <button onClick={() => setShowLogin(true)}>Login</button>
+                        <button style={{marginLeft: "20px"}} onClick={() => setShowSignup(true)}>Sign Up</button>
+                      </>
                     ) : (
                       <button onClick={handleLogout}>Logout</button>
                     )}
@@ -128,6 +134,10 @@ function App() {
           show={showLogin}
           onClose={() => setShowLogin(false)}
           onLogin={handleLogin}
+        />
+        <SignUpModal
+          show={showSignup}
+          onClose={() => setShowSignup(false)}
         />
     </div>
   );
