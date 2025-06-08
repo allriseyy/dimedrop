@@ -8,18 +8,28 @@ const LoginModal = ({ show, onClose, onLogin }) => {
   const encodedUsername = btoa('admin'); // "YWRtaW4="
   const encodedPassword = btoa('admin'); // "cGFzc3dvcmQxMjM="
 
-  const handleLogin = () => {
-    if (
-      btoa(username) === encodedUsername &&
-      btoa(password) === encodedPassword
-    ) {
-      setErrorMsg('');
-      onLogin();
+  const handleLogin = async () => {
+  try {
+    const response = await fetch('http://localhost:5000/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      localStorage.setItem('token', data.token);
+      onLogin();  // updates auth state in App
       onClose();
     } else {
-      setErrorMsg('Invalid credentials');
+      setErrorMsg(data.message || 'Login failed');
     }
-  };
+  } catch (err) {
+    console.error('Login error:', err);
+    setErrorMsg('Login failed. Try again later.');
+  }
+};
 
   const handleClose = () => {
     setErrorMsg('');
