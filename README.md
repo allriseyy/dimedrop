@@ -76,7 +76,7 @@ docker compose up --build
 4-enhance landing page ✅ <br/>
 5-unit test ✅ <br/>
 6-login feature ✅ <br/>
-7-sign up feature <br/>
+7-sign up feature ✅ <br/>
 8-expenses page <br/>
 9-home page ✅ <br/>
 10-about us page <br/>
@@ -93,6 +93,8 @@ Typescript
 ### Framework
 React <br/>
 TailwindCSS
+### DB
+PostgreSQL
 ### OS
 Linux Ubuntu 24.04
 ### Platform
