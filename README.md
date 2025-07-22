@@ -69,6 +69,21 @@ docker compose up --build
 ```
 3. enjoy !
 
+## Backend
+1. navigate into the backend folder
+```bash
+cd backend
+```
+2. start the server so you can login/sign up
+```bash
+node server.js
+```
+
+## PostgreSQL
+```bash
+psql -U allriseyy -d dimedropdb -h localhost
+```
+
 ## TO-DO
 1-create a landing page ✅ <br/>
 2-restructure the files ✅ <br/>
@@ -108,6 +123,10 @@ Web
 ![image](https://github.com/user-attachments/assets/5a9b908a-eb43-41ba-b5bb-d0bfaf0e74c1)
 ![image](https://github.com/user-attachments/assets/1fe16e67-bcb3-4412-ac2c-051f0dbcdd9e)
 ![image](https://github.com/user-attachments/assets/8af4b148-4e56-421f-b665-e71febf9a856)
+
+# .env
+<img width="622" height="161" alt="image" src="https://github.com/user-attachments/assets/420cb64d-9d5c-45da-b8df-2361981f1d12" />
+
 
 
 
